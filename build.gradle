@@ -52,10 +52,20 @@ allure {
     }
 }
 
-/*
-test {
-    useJUnitPlatform()
-}*/
 tasks.withType(Test) {
-    useJUnitPlatform()
+    systemProperties(System.getProperties())
+
+    useJUnitPlatform() {
+        if (System.getProperty("testTag").equals("Search")) {
+            includeTags "Search"
+        } else if (System.getProperty("testTag").equals("Open")) {
+            includeTags "Open"
+        } else if (System.getProperty("testTag").equals("ShortVideos")) {
+            includeTags "ShortVideos"
+        } else if (System.getProperty("testTag").equals("HeaderTabs")) {
+            includeTags "HeaderTabs"
+        } else if (System.getProperty("testTag").equals("AllTests")) {
+            includeTags "AllTests"
+        }
+    }
 }
