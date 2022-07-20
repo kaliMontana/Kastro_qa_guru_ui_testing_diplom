@@ -38,7 +38,7 @@ public class FeatureTests extends TestSetup {
 	@Test
 	@Tag("Open")
 	@Feature("Open video")
-	@DisplayName("Check Open video")
+	@DisplayName("Check open video")
 	public void openVideoFeatureTest() {
 		resultsPage.openResultPageStep();
 
@@ -55,7 +55,7 @@ public class FeatureTests extends TestSetup {
 	@Test
 	@Tag("ShortVideos")
 	@Feature("Short Videos")
-	@DisplayName("Check short Videos")
+	@DisplayName("Check short videos")
 	public void checkShortVideosFeatureTest() {
 		mainPage.openMainPageStep();
 
