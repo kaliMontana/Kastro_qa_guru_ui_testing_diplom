@@ -59,7 +59,7 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check short videos")
 	public void checkShortVideosFeatureTest() {
 		mainPage.openMainPageStep();
-		sleep(550000); //TODO удалить
+		//sleep(450000); //TODO удалить
 
 		beforeYouContinuePage.clickOnRejectAll();
 
