@@ -61,7 +61,7 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check short videos")
 	public void checkShortVideosFeatureTest() {
 		mainPage.openMainPageStep();
-		sleep(30000); //TODO удалить
+		sleep(50000); //TODO удалить
 
 		mainPage.clickOnPanoramicVideosStep();
 
