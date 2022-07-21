@@ -47,7 +47,7 @@ public class TestSetup {
 			chromeOptions.addArguments("disable-infobars");
 			chromeOptions.addArguments("disable-popup-blocking");
 			chromeOptions.addArguments("disable-notifications");
-			chromeOptions.addArguments("incognito");
+			chromeOptions.addArguments("--incognito");
 
 			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
