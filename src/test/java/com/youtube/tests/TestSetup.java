@@ -22,11 +22,11 @@ public class TestSetup {
 
 	@BeforeAll
 	static void setup() {
-		if (System.getProperty("Lancher").equals("Local")) {
+		if (System.getProperty("Launcher").equals("Local")) {
 			Configuration.baseUrl = baseUrl;
 			Configuration.browserSize = browserSize;
 			Configuration.browser = browserName;
-		} else if (System.getProperty("Lancher").equals("Remote")) {
+		} else if (System.getProperty("Launcher").equals("Remote")) {
 			Configuration.baseUrl = baseUrl;
 			Configuration.browser = browserName;
 			Configuration.browserSize = browserSize;
