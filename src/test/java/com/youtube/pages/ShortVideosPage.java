@@ -20,7 +20,8 @@ public class ShortVideosPage {
 	private final SelenideElement commentsElement = $("#comments-button a #text");
 	private final SelenideElement shareElement = $("#share-button a #text");
 
-	private static final String DISLIKE = "Не нравится";
+	private static final String DISLIKE_RUS = "Не нравится";
+	private static final String DISLIKE = "Dislike";
 	private static final String SHARE = "Поделиться";
 
 
@@ -69,7 +70,7 @@ public class ShortVideosPage {
 				.isTrue();
 		softAssertions.assertThat(likeListElement.get(1).$("a #text").getText())
 				.as("Icon \"Like\" has grown text")
-				.isEqualTo(DISLIKE);
+				.isEqualTo(getDislikeText());
 
 		softAssertions.assertAll();
 	}
@@ -100,5 +101,16 @@ public class ShortVideosPage {
 				.isEqualTo(SHARE);
 
 		softAssertions.assertAll();
+	}
+
+	private String getDislikeText() {
+		String text = null;
+
+		if (System.getProperty("Launcher").equals("Local")) {
+			text = DISLIKE_RUS;
+		} else if (System.getProperty("Launcher").equals("Remote")) {
+			text = DISLIKE;
+		}
+		return text;
 	}
 }
