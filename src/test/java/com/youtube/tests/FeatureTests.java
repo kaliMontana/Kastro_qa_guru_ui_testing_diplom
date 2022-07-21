@@ -12,6 +12,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selenide.sleep;
+
 @Tag("AllTests")
 @Owner("Kastro B.")
 @Story("Youtube features")
@@ -41,6 +43,7 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check open video")
 	public void openVideoFeatureTest() {
 		resultsPage.openResultPageStep();
+		sleep(20000);
 
 		resultsPage.checkExistenceItemsInResultStep();
 

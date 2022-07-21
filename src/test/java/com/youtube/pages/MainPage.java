@@ -18,10 +18,6 @@ public class MainPage {
 	private final SelenideElement searchElement = $("#search-input");
 	private final ElementsCollection itemListElement = $$(".sbse");
 
-	private final SelenideElement singInElement = $("#end ytd-button-renderer");
-	private final SelenideElement identifierIdElement = $("#identifierId");
-	private final SelenideElement nextElement = $("#identifierNext");
-
 	private final SelenideElement shortsElement = $(".style-scope ytd-guide-section-renderer");
 
 	private static final String SEARCHED_WORD = "Appium";
@@ -56,8 +52,7 @@ public class MainPage {
 	}
 
 	@Step
-	public void clickOnPanoramicVideosStep(){
+	public void clickOnPanoramicVideosStep() {
 		shortsElement.shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).click();
 	}
-
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Getter
-public enum TabHeadersData {
+public enum TabHeadersRusData {
 
 	ALL(
 			"Все"
@@ -61,6 +61,9 @@ public enum TabHeadersData {
 	CRAFTS(
 			"Ремесла"
 	),
+	ANIMATION(
+			"Анимация"
+	),
 	LAST_PUBLISHED_VIDEOS(
 			"Последние опубликованные видео"
 	);
@@ -70,7 +73,7 @@ public enum TabHeadersData {
 	private static final List<String> tabsValuesList = new ArrayList<>();
 
 	static {
-		for (TabHeadersData tabHeadersData : TabHeadersData.values()) {
+		for (TabHeadersRusData tabHeadersData : TabHeadersRusData.values()) {
 			tabsValuesList.add(tabHeadersData.value);
 		}
 	}

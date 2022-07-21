@@ -33,7 +33,6 @@ public class ResultsPage {
 		Attach.attachAsText("Quantity of videos", String.valueOf(itemListElement.size()));
 	}
 
-
 	@Step
 	public String getItemTitleFromResultListStep() {
 		String itemTitleFromResult = itemListElement.first().find(By.id("video-title")).getText();
