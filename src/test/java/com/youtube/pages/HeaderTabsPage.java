@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.youtube.helpers.Waiting.EIGHT_SEC;
 import static com.youtube.helpers.Waiting.SIX_SEC;
 
-public class HeaderTabs {
+public class HeaderTabsPage {
 	private final ElementsCollection tabsListTextElements = $$("#chips yt-chip-cloud-chip-renderer #text");
 	private final ElementsCollection tabsListElements = $$("#chips yt-chip-cloud-chip-renderer");
 

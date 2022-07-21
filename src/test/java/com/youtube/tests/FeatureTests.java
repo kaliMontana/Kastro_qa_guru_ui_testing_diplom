@@ -1,9 +1,6 @@
 package com.youtube.tests;
 
-import com.youtube.pages.HeaderTabs;
-import com.youtube.pages.MainPage;
-import com.youtube.pages.ResultsPage;
-import com.youtube.pages.ShortVideosPage;
+import com.youtube.pages.*;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
 import io.qameta.allure.Owner;
@@ -22,7 +19,8 @@ public class FeatureTests extends TestSetup {
 	MainPage mainPage = new MainPage();
 	ResultsPage resultsPage = new ResultsPage();
 	ShortVideosPage shortVideosPage = new ShortVideosPage();
-	HeaderTabs headerTabs = new HeaderTabs();
+	HeaderTabsPage headerTabs = new HeaderTabsPage();
+	BeforeYouContinuePage beforeYouContinuePage = new BeforeYouContinuePage();
 
 
 	@Test
@@ -61,7 +59,9 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check short videos")
 	public void checkShortVideosFeatureTest() {
 		mainPage.openMainPageStep();
-		sleep(50000); //TODO удалить
+		//sleep(50000); //TODO удалить
+
+		beforeYouContinuePage.clickOnRejectAll();
 
 		mainPage.clickOnPanoramicVideosStep();
 
