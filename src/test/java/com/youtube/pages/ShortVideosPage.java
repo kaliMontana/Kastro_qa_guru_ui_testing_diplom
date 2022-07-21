@@ -99,7 +99,7 @@ public class ShortVideosPage {
 				.isTrue();
 		softAssertions.assertThat(shareElement.getText())
 				.as("Icon \"Share\" has grown text")
-				.isEqualTo(getDislikeText());
+				.isEqualTo(getShareText());
 
 		softAssertions.assertAll();
 	}
