@@ -9,8 +9,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.sleep;
-
 @Tag("AllTests")
 @Owner("Kastro B.")
 @Story("Youtube features")
@@ -30,6 +28,8 @@ public class FeatureTests extends TestSetup {
 	public void searchFeatureTest() {
 		mainPage.openMainPageStep();
 
+		beforeYouContinuePage.clickOnRejectAllStep();
+
 		mainPage.searchStep();
 		mainPage.checkQuantityResultStep();
 		mainPage.checkExistenceWordInResultStep();
@@ -41,7 +41,8 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check open video")
 	public void openVideoFeatureTest() {
 		resultsPage.openResultPageStep();
-		//sleep(20000); TODO удалить
+
+		beforeYouContinuePage.clickOnRejectAllStep();
 
 		resultsPage.checkExistenceItemsInResultStep();
 
@@ -59,9 +60,8 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check short videos")
 	public void checkShortVideosFeatureTest() {
 		mainPage.openMainPageStep();
-		//sleep(450000); //TODO удалить
 
-		beforeYouContinuePage.clickOnRejectAll();
+		beforeYouContinuePage.clickOnRejectAllStep();
 
 		mainPage.clickOnPanoramicVideosStep();
 
@@ -79,6 +79,8 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check Header tabs")
 	public void checkHeaderTabsTest() {
 		mainPage.openMainPageStep();
+
+		beforeYouContinuePage.clickOnRejectAllStep();
 
 		headerTabs.checkHeaderTabsSteps();
 	}

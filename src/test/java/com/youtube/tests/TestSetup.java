@@ -39,10 +39,10 @@ public class TestSetup {
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			capabilities.setCapability("enableVNC", true);
 			capabilities.setCapability("enableVideo", true);
-			//Configuration.browserCapabilities = capabilities;
+			Configuration.browserCapabilities = capabilities;
 
 			ChromeOptions chromeOptions = new ChromeOptions();
-
+			/*
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--disable-infobars");
 			chromeOptions.addArguments("--disable-popup-blocking");
@@ -52,16 +52,16 @@ public class TestSetup {
 
 			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
-			Configuration.browserCapabilities = capabilities;
+			Configuration.browserCapabilities = capabilities;*/
 		}
 	}
 
-	@AfterEach //TODO problema with session id
+	/*@AfterEach //TODO problema with session id
 	void addAttachments() {
 		Attach.screenshotAs("Test site screenshot");
 		Attach.pageSource();
 		Attach.addVideo();
-	}
+	}*/
 
 	@AfterEach
 	void closeBrowser() {

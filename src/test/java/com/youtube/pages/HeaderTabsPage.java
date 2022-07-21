@@ -23,6 +23,7 @@ public class HeaderTabsPage {
 	private static final String TRUE = "true";
 
 
+	//region Steps
 	@Step
 	public void checkHeaderTabsSteps() {
 		SoftAssertions softAssertions = new SoftAssertions();
@@ -46,6 +47,7 @@ public class HeaderTabsPage {
 
 		softAssertions.assertAll();
 	}
+	//endregion Steps
 
 	private List<String> getTabHeadersDataProvider() {
 		List<String> tabHeaderList = null;

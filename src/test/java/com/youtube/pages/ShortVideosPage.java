@@ -26,6 +26,7 @@ public class ShortVideosPage {
 	private static final String SHARE = "Share";
 
 
+	//region Steps
 	@Step
 	public void checkExistenceShortVideosStep() {
 		shortsItemListElement.shouldHave(CollectionCondition.sizeGreaterThan(0));
@@ -103,6 +104,7 @@ public class ShortVideosPage {
 
 		softAssertions.assertAll();
 	}
+	//endregion Steps
 
 	private String getDislikeText() {
 		String text = null;
