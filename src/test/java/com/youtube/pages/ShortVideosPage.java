@@ -22,7 +22,8 @@ public class ShortVideosPage {
 
 	private static final String DISLIKE_RUS = "Не нравится";
 	private static final String DISLIKE = "Dislike";
-	private static final String SHARE = "Поделиться";
+	private static final String SHARE_RUS = "Поделиться";
+	private static final String SHARE = "Share";
 
 
 	@Step
@@ -98,7 +99,7 @@ public class ShortVideosPage {
 				.isTrue();
 		softAssertions.assertThat(shareElement.getText())
 				.as("Icon \"Share\" has grown text")
-				.isEqualTo(SHARE);
+				.isEqualTo(getDislikeText());
 
 		softAssertions.assertAll();
 	}
@@ -110,6 +111,17 @@ public class ShortVideosPage {
 			text = DISLIKE_RUS;
 		} else if (System.getProperty("Launcher").equals("Remote")) {
 			text = DISLIKE;
+		}
+		return text;
+	}
+
+	private String getShareText() {
+		String text = null;
+
+		if (System.getProperty("Launcher").equals("Local")) {
+			text = SHARE_RUS;
+		} else if (System.getProperty("Launcher").equals("Remote")) {
+			text = SHARE;
 		}
 		return text;
 	}
