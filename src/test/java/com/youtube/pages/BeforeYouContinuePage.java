@@ -13,7 +13,8 @@ public class BeforeYouContinuePage {
 	private final SelenideElement rejectAllElement = $("ytd-app tp-yt-paper-dialog tp-yt-paper-button #text");
 
 	public void clickOnRejectAll(){
-		rejectAllElement.shouldBe(Condition.exist, Duration.ofSeconds(SIX_SEC.getValue())).click();
+		rejectAllElement.shouldBe(Condition.exist, Duration.ofSeconds(SIX_SEC.getValue()))
+				.shouldHave(Condition.text("Reject all")).click();
 
 	}
 }
