@@ -21,24 +21,29 @@ public class TestSetup {
 
 	@BeforeAll
 	static void setup() {
-		if (System.getProperty("Launcher").equals("Local")) {
-			Configuration.baseUrl = baseUrl;
-			Configuration.browserSize = browserSize;
-			Configuration.browser = browserName;
-		} else if (System.getProperty("Launcher").equals("Remote")) {
-			Configuration.baseUrl = baseUrl;
-			Configuration.browser = browserName;
-			Configuration.browserSize = browserSize;
-			Configuration.remote = format("https://{}:{}@{}",
-					config.getSelenoidUserName(),
-					config.getSelenoidPassword(),
-					config.getRemoteUrl()
-			);
+		switch (System.getProperty("Launcher")) {
+			case "Local":
+				Configuration.baseUrl = baseUrl;
+				Configuration.browserSize = browserSize;
+				Configuration.browser = browserName;
+				break;
+			case "Remote":
+				Configuration.baseUrl = baseUrl;
+				Configuration.browser = browserName;
+				Configuration.browserSize = browserSize;
+				Configuration.remote = format("https://{}:{}@{}",
+						config.getSelenoidUserName(),
+						config.getSelenoidPassword(),
+						config.getRemoteUrl()
+				);
 
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.setCapability("enableVNC", true);
-			capabilities.setCapability("enableVideo", true);
-			Configuration.browserCapabilities = capabilities;
+				DesiredCapabilities capabilities = new DesiredCapabilities();
+				capabilities.setCapability("enableVNC", true);
+				capabilities.setCapability("enableVideo", true);
+				Configuration.browserCapabilities = capabilities;
+				break;
+			default:
+				throw new RuntimeException("No such environment");
 		}
 	}
 
