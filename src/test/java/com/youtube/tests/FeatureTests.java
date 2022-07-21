@@ -16,8 +16,8 @@ import org.junit.jupiter.api.Test;
 public class FeatureTests extends TestSetup {
 	MainPage mainPage = new MainPage();
 	ResultsPage resultsPage = new ResultsPage();
-	ShortVideosPage shortVideosPage = new ShortVideosPage();
 	HeaderTabsPage headerTabs = new HeaderTabsPage();
+	ShortVideosPage shortVideosPage = new ShortVideosPage();
 	BeforeYouContinuePage beforeYouContinuePage = new BeforeYouContinuePage();
 
 
