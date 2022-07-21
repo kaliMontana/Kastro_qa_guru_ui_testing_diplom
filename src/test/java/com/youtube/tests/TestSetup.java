@@ -54,12 +54,12 @@ public class TestSetup {
 		}
 	}
 
-	/*@AfterEach //TODO problema with session id
+	@AfterEach //TODO problema with session id
 	void addAttachments() {
 		Attach.screenshotAs("Test site screenshot");
 		Attach.pageSource();
 		Attach.addVideo();
-	}*/
+	}
 
 	@AfterEach
 	void closeBrowser() {
