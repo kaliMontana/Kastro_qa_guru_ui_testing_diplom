@@ -41,14 +41,14 @@ public class TestSetup {
 			capabilities.setCapability("enableVideo", true);
 			//Configuration.browserCapabilities = capabilities;
 
-			/*ChromeOptions chromeOptions = new ChromeOptions();
+			ChromeOptions chromeOptions = new ChromeOptions();
 
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--disable-infobars");
 			chromeOptions.addArguments("--disable-popup-blocking");
 			chromeOptions.addArguments("--disable-notifications");
 
-			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);*/
+			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
 			Configuration.browserCapabilities = capabilities;
 		}
