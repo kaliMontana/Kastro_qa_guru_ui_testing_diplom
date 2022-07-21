@@ -43,7 +43,7 @@ public class FeatureTests extends TestSetup {
 	@DisplayName("Check open video")
 	public void openVideoFeatureTest() {
 		resultsPage.openResultPageStep();
-		sleep(20000);
+		//sleep(20000); TODO удалить
 
 		resultsPage.checkExistenceItemsInResultStep();
 

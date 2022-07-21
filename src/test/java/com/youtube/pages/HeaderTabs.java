@@ -50,9 +50,9 @@ public class HeaderTabs {
 	private List<String> getTabHeadersDataProvider() {
 		List<String> tabHeaderList = null;
 
-		if (System.getProperty("Lancher").equals("Local")) {
+		if (System.getProperty("Launcher").equals("Local")) {
 			tabHeaderList = TabHeadersRusData.getTabsValuesList();
-		} else if (System.getProperty("Lancher").equals("Remote")) {
+		} else if (System.getProperty("Launcher").equals("Remote")) {
 			tabHeaderList = TabHeadersEngData.getTabsValuesList();
 		}
 		return tabHeaderList;
