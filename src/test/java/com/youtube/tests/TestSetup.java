@@ -43,10 +43,10 @@ public class TestSetup {
 
 			ChromeOptions chromeOptions = new ChromeOptions();
 
-			chromeOptions.addArguments("--no-sandbox");
-			chromeOptions.addArguments("--disable-infobars");
-			chromeOptions.addArguments("--disable-popup-blocking");
-			chromeOptions.addArguments("--disable-notifications");
+			chromeOptions.addArguments("no-sandbox");
+			chromeOptions.addArguments("disable-infobars");
+			chromeOptions.addArguments("disable-popup-blocking");
+			chromeOptions.addArguments("disable-notifications");
 
 			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
