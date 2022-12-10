@@ -41,7 +41,7 @@ After the run is completed, notifications are sent using the bot in Telegram.
 - [x] Testing that the Short Videos icon forwards to the correct page and yours existences
 - [x] Checking for the existence of tags in the Header tabs
 
-## Test starting
+## Starting test 
 <details>
 <summary>Details ...</summary>
 
@@ -53,6 +53,9 @@ After the run is completed, notifications are sent using the bot in Telegram.
 ### Starting tests remote in Selenoid
 * ```gradle clean test -DtestTag=${TAGTEST} -DLauncher=Remote allureServe```
 </details>
+
+### Starting tests remote from Jenkins
+......>>>
 
 
 ## Kastro_qa_guru_ui_testing_diplom
