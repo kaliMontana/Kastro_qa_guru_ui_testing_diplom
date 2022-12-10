@@ -50,11 +50,11 @@ After the run is completed, notifications are sent using the bot in Telegram.
 * ```gradle clean test -DtestTag=${TAGTEST} -DLauncher=Local allureServe```
 * ```gradle clean test -DtestTag=AllTest -DLauncher=Local allureServe```
 
-### Starting tests remote in Selenoid
+### Starting tests remotely in Selenoid
 * ```gradle clean test -DtestTag=${TAGTEST} -DLauncher=Remote allureServe```
 </details>
 
-### Starting tests remote from Jenkins
+### Starting tests from Jenkins
 ......>>>
 
 
