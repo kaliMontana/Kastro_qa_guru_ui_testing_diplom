@@ -4,9 +4,9 @@ Site for testing [youtube.com](https://www.youtube.com)
 
 ## Content
 
-* <a href="#link-Technologies-and-tools">Technologies and tools</a>
-* <a href="#link-Implemented-tests">Implemented tests</a>
-* <a href="#link-Starting-test">Starting test </a>
+* <a href="#link-technologies-and-tools">Technologies and tools</a>
+* <a href="#link-implemented-tests">Implemented tests</a>
+* <a href="#link-starting-test">Starting test </a>
 
 ## Technologies and tools
 
