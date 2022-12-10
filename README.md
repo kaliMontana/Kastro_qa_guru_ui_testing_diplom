@@ -21,6 +21,22 @@ Site for testing [youtube.com](https://www.youtube.com)
 <img width="6%" src="images/logo/Telegram.svg">
 </p>
 
+In this project, autotests are written in Java using Selenide for UI tests.
+
+JUnit 5 is used as a unit testing library.
+
+Gradle is used to build the project automatically.
+
+Selenoid launches browsers in Docker containers.
+
+Allure Report generates a test run report.
+
+Jenkins is running tests.
+
+After the run is completed, notifications are sent using the bot in Telegram.
+
+## Implemented test
+
 ## Kastro_qa_guru_ui_testing_diplom
 
 The same UI test plus notificacion to Telegram by Bot but without file allure-notifications-4.2.1.jar Command to test
