@@ -35,7 +35,11 @@ Jenkins is running tests.
 
 After the run is completed, notifications are sent using the bot in Telegram.
 
-## Implemented test
+## Implemented tests
+- [x] Testing the Search functionality and checking for existence of results
+- [x] Testing the functionality of opening a video and checking the existence of its properties such as the title and others
+- [x] Checking for the existence of tags in the Header tabs
+
 
 ## Kastro_qa_guru_ui_testing_diplom
 
