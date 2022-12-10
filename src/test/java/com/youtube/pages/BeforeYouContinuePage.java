@@ -14,7 +14,7 @@ public class BeforeYouContinuePage {
 	private final SelenideElement rejectAllElement = $x("//*[text()='Reject all']");
 
 
-	@Step
+	@Step("Click on the Reject element")
 	public void clickOnRejectAllStep() {
 		sleep(2000);
 

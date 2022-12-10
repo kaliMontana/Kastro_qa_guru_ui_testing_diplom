@@ -22,18 +22,18 @@ public class ResultsPage {
 	private static final String RESULT_PATH = "/results?search_query=appium";
 
 
-	@Step
+	@Step("Open the Search page")
 	public void openResultPageStep() {
 		open(RESULT_PATH);
 	}
 
-	@Step
+	@Step("Check the existence of video names")
 	public void checkExistenceItemsInResultStep() {
 		itemListElement.shouldBe(CollectionCondition.sizeGreaterThan(0), Duration.ofSeconds(SIX_SEC.getValue()));
 		Attach.attachAsText("Quantity of videos", String.valueOf(itemListElement.size()));
 	}
 
-	@Step
+	@Step("get the name of the first video")
 	public String getItemTitleFromResultListStep() {
 		String itemTitleFromResult = itemListElement.first().find(By.id("video-title")).getText();
 		Attach.attachAsText("Title of first video", itemTitleFromResult);
@@ -41,12 +41,12 @@ public class ResultsPage {
 		return itemTitleFromResult;
 	}
 
-	@Step
+	@Step("Click on the first video")
 	public void clickOnFirstItemResultStep() {
 		itemListElement.first().shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).click();
 	}
 
-	@Step
+	@Step("Get the name of the opened video")
 	public String getItemTitle() {
 		String itemTitle = itemTitleElement.shouldBe(enabled, Duration.ofSeconds(EIGHT_SEC.getValue())).getOwnText();
 
@@ -58,7 +58,7 @@ public class ResultsPage {
 		return itemTitle;
 	}
 
-	@Step
+	@Step("Compare the name of the first video in the result list and the name of the opened video")
 	public void checkVideoTitlesStep(String itemTitleFromResult, String itemTitle) {
 		Assertions.assertThat(itemTitle)
 				.as("Video titles not are the same")

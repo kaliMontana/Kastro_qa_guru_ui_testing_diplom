@@ -24,7 +24,7 @@ public class HeaderTabsPage {
 
 
 	//region Steps
-	@Step
+	@Step("Check the existence of the tabs in the header bar")
 	public void checkHeaderTabsSteps() {
 		SoftAssertions softAssertions = new SoftAssertions();
 

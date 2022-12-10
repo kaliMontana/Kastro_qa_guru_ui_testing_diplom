@@ -23,24 +23,24 @@ public class MainPage {
 	private static final String SEARCHED_WORD = "Appium";
 
 
-	@Step
+	@Step("Open the main page")
 	public void openMainPageStep() {
 		open("");
 	}
 
-	@Step
+	@Step("Put the searched word in the search element")
 	public void searchStep() {
 		searchElement.shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).click();
 		searchElement.find(By.id("search")).setValue(SEARCHED_WORD);
 	}
 
-	@Step
+	@Step("Check the amount of results in the pop-up list")
 	public void checkQuantityResultStep() {
 		itemListElement.shouldHave(CollectionCondition.sizeGreaterThan(0));
 		Attach.attachAsText("Quantity od result", String.valueOf(itemListElement.size()));
 	}
 
-	@Step
+	@Step("Check if exits the searched word in the pop-up list")
 	public void checkExistenceWordInResultStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
@@ -51,7 +51,7 @@ public class MainPage {
 		softAssertions.assertAll();
 	}
 
-	@Step
+	@Step("Click on Panoramic element")
 	public void clickOnPanoramicVideosStep() {
 		shortsElement.shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).click();
 	}

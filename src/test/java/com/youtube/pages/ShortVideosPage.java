@@ -12,6 +12,7 @@ import java.time.Duration;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static com.youtube.helpers.Waiting.EIGHT_SEC;
 import static com.youtube.helpers.Waiting.SIX_SEC;
 
 public class ShortVideosPage {
@@ -27,14 +28,14 @@ public class ShortVideosPage {
 
 
 	//region Steps
-	@Step
+	@Step("Check the existence of short videos")
 	public void checkExistenceShortVideosStep() {
 		shortsItemListElement.shouldHave(CollectionCondition.sizeGreaterThan(0));
 
 		Attach.attachAsText("Quantity of shorts videos", String.valueOf(shortsItemListElement.size()));
 	}
 
-	@Step
+	@Step("Check the existence of short video names")
 	public void checkExistenceShortVideoTitlesStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
@@ -49,25 +50,25 @@ public class ShortVideosPage {
 		softAssertions.assertAll();
 	}
 
-	@Step
+	@Step("Check the existence of the like icon")
 	public void checkLikeIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(likeListElement.get(0).shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).exists())
+		softAssertions.assertThat(likeListElement.shouldHave(CollectionCondition.sizeGreaterThan(0)).get(1).shouldBe(enabled, Duration.ofSeconds(EIGHT_SEC.getValue())).exists())
 				.as("Icon \"Like\" not found")
 				.isTrue();
-		softAssertions.assertThat(likeListElement.get(0).$("a #text").getText())
+		softAssertions.assertThat(likeListElement.shouldHave(CollectionCondition.sizeGreaterThan(0)).get(1).$("button").getAttribute("aria-label"))
 				.as("Icon \"Like\" does not contain a text")
 				.isNotNull();
 
 		softAssertions.assertAll();
 	}
 
-	@Step
+	@Step("Check the existence of the dislike icon")
 	public void checkDislikeIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(likeListElement.get(1).shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).exists())
+		softAssertions.assertThat(likeListElement.get(1).shouldBe(enabled, Duration.ofSeconds(EIGHT_SEC.getValue())).exists())
 				.as("Icon \"dislike\" not found")
 				.isTrue();
 		softAssertions.assertThat(likeListElement.get(1).$("a #text").getText())
@@ -77,7 +78,7 @@ public class ShortVideosPage {
 		softAssertions.assertAll();
 	}
 
-	@Step
+	@Step("Check the existence of the comment icon")
 	public void checkCommentsIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
@@ -91,7 +92,7 @@ public class ShortVideosPage {
 		softAssertions.assertAll();
 	}
 
-	@Step
+	@Step("Check the existence of the share icon")
 	public void checkShareIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
