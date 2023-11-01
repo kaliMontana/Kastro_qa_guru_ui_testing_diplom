@@ -20,7 +20,7 @@ public class BeforeYouContinuePage {
 
 		if (rejectAllElement.exists()) {
 			rejectAllElement.shouldBe(Condition.exist, Duration.ofSeconds(SIX_SEC.getValue()))
-					.shouldHave(Condition.text("Reject all")).click();
+					.shouldHave(Condition.text("Reject all"), Duration.ofSeconds(5)).click();
 		}
 	}
 }
