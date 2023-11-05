@@ -12,7 +12,7 @@ import static com.youtube.helpers.Waiting.SIX_SEC;
 
 public class BeforeYouContinuePage {
 	//private final SelenideElement rejectAllElement = $x("//*[text()='Reject all']");
-	private final SelenideElement rejectAllElement = $x("//button[contains(@aria-label, ‘Reject the use of cookies’)]");
+	private final SelenideElement rejectAllElement = $x("//button[contains(@aria-label, 'Reject the use of cookies')]");
 
 
 	@Step("Click on the Reject element")
