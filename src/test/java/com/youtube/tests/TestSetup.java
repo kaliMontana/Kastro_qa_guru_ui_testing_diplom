@@ -31,8 +31,7 @@ public class TestSetup {
 				Configuration.baseUrl = baseUrl;
 				Configuration.browser = browserName;
 				Configuration.browserSize = browserSize;
-				//Configuration.remote = format("https://{}:{}@{}",
-				Configuration.remote = format("http://{}:{}@{}",
+				Configuration.remote = format("https://{}:{}@{}",
 						config.getSelenoidUserName(),
 						config.getSelenoidPassword(),
 						config.getRemoteUrl()
