@@ -10,6 +10,7 @@ import org.assertj.core.api.SoftAssertions;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.enabled;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.youtube.helpers.Waiting.EIGHT_SEC;
@@ -71,7 +72,7 @@ public class ShortVideosPage {
 		softAssertions.assertThat(likeListElement.get(1).shouldBe(enabled, Duration.ofSeconds(EIGHT_SEC.getValue())).exists())
 				.as("Icon \"dislike\" not found")
 				.isTrue();
-		softAssertions.assertThat(likeListElement.get(1).$("a #text").getText())
+		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("a #text").getText())
 				.as("Icon \"Like\" has grown text")
 				.isEqualTo(getDislikeText());
 
