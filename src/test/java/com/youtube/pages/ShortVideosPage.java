@@ -18,7 +18,7 @@ import static com.youtube.helpers.Waiting.SIX_SEC;
 
 public class ShortVideosPage {
 	private final ElementsCollection shortsItemListElement = $$("#shorts-inner-container ytd-reel-video-renderer h2 yt-formatted-string");
-	private final ElementsCollection likeListElement = $$("ytd-toggle-button-renderer span");
+	private final ElementsCollection likeListElement = $$("ytd-toggle-button-renderer");
 	private final SelenideElement commentsElement = $("#comments-button a #text");
 	private final SelenideElement shareElement = $("#share-button a #text");
 
@@ -73,7 +73,7 @@ public class ShortVideosPage {
 				.as("Icon \"dislike\" not found")
 				.isTrue();
 		//softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("a #text").getText())
-		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).getText())
+		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("span").getText())
 				.as("Icon \"Like\" has grown text")
 				.isEqualTo(getDislikeText());
 
