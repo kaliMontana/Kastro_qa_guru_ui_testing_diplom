@@ -72,7 +72,8 @@ public class ShortVideosPage {
 		softAssertions.assertThat(likeListElement.get(1).shouldBe(enabled, Duration.ofSeconds(EIGHT_SEC.getValue())).exists())
 				.as("Icon \"dislike\" not found")
 				.isTrue();
-		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("a #text").getText())
+		//softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("a #text").getText())
+		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).getText())
 				.as("Icon \"Like\" has grown text")
 				.isEqualTo(getDislikeText());
 
