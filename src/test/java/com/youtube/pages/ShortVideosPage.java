@@ -7,14 +7,13 @@ import com.youtube.helpers.Attach;
 import io.qameta.allure.Step;
 import org.assertj.core.api.SoftAssertions;
 
-import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.youtube.helpers.Waiting.EIGHT_SEC;
 import static com.youtube.helpers.Waiting.SIX_SEC;
+import static java.time.Duration.ofSeconds;
 
 public class ShortVideosPage {
 	private final ElementsCollection shortsItemListElement = $$("#shorts-inner-container ytd-reel-video-renderer h2 yt-formatted-string");
@@ -41,7 +40,7 @@ public class ShortVideosPage {
 		SoftAssertions softAssertions = new SoftAssertions();
 
 		for (SelenideElement selenideElement : shortsItemListElement) {
-			softAssertions.assertThat(selenideElement.shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).getText())
+			softAssertions.assertThat(selenideElement.shouldBe(enabled, ofSeconds(SIX_SEC.getValue())).getText())
 					.as("The video does not title")
 					.isNotNull();
 
@@ -55,10 +54,10 @@ public class ShortVideosPage {
 	public void checkLikeIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(likeListElement.shouldHave(CollectionCondition.sizeGreaterThan(0)).get(1).shouldBe(enabled, Duration.ofSeconds(EIGHT_SEC.getValue())).exists())
+		softAssertions.assertThat(likeListElement.shouldHave(CollectionCondition.sizeGreaterThan(0)).get(1).shouldBe(enabled, ofSeconds(EIGHT_SEC.getValue())).exists())
 				.as("Icon \"Like\" not found")
 				.isTrue();
-		softAssertions.assertThat(likeListElement.shouldHave(CollectionCondition.sizeGreaterThan(0)).get(1).$("button").getAttribute("aria-label"))
+		softAssertions.assertThat(likeListElement.shouldHave(CollectionCondition.sizeGreaterThan(0)).get(1).shouldBe(visible, ofSeconds(EIGHT_SEC.getValue())).$("button").getAttribute("aria-label"))
 				.as("Icon \"Like\" does not contain a text")
 				.isNotNull();
 
@@ -69,11 +68,11 @@ public class ShortVideosPage {
 	public void checkDislikeIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(likeListElement.get(1).shouldBe(enabled, Duration.ofSeconds(EIGHT_SEC.getValue())).exists())
+		softAssertions.assertThat(likeListElement.get(1).shouldBe(enabled, ofSeconds(EIGHT_SEC.getValue())).exists())
 				.as("Icon \"dislike\" not found")
 				.isTrue();
 		//softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("a #text").getText())
-		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("span").getText())
+		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, ofSeconds(EIGHT_SEC.getValue())).$("span").getText())
 				.as("Icon \"Like\" has grown text")
 				.isEqualTo(getDislikeText());
 
@@ -84,7 +83,7 @@ public class ShortVideosPage {
 	public void checkCommentsIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(commentsElement.shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).exists())
+		softAssertions.assertThat(commentsElement.shouldBe(enabled, ofSeconds(SIX_SEC.getValue())).exists())
 				.as("Icon \"Comments\" not found")
 				.isTrue();
 		softAssertions.assertThat(commentsElement.getText())
@@ -98,7 +97,7 @@ public class ShortVideosPage {
 	public void checkShareIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(shareElement.shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).exists())
+		softAssertions.assertThat(shareElement.shouldBe(enabled, ofSeconds(SIX_SEC.getValue())).exists())
 				.as("Icon \"Comments\" not found")
 				.isTrue();
 		softAssertions.assertThat(shareElement.getText())
