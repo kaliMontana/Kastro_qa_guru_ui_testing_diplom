@@ -18,7 +18,7 @@ import static com.youtube.helpers.Waiting.SIX_SEC;
 
 public class ShortVideosPage {
 	private final ElementsCollection shortsItemListElement = $$("#shorts-inner-container ytd-reel-video-renderer h2 yt-formatted-string");
-	private final ElementsCollection likeListElement = $$("ytd-toggle-button-renderer");
+	private final ElementsCollection likeListElement = $$("ytd-toggle-button-renderer span");
 	private final SelenideElement commentsElement = $("#comments-button a #text");
 	private final SelenideElement shareElement = $("#share-button a #text");
 
