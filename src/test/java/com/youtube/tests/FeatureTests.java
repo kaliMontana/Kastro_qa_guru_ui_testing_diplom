@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Tag("AllTests")
-@Owner("Kastro B.")
+@Owner("Castro W.")
 @Story("Youtube features")
 @Link("https://www.youtube.com")
 public class FeatureTests extends TestSetup {
