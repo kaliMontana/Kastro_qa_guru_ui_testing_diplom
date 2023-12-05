@@ -91,6 +91,42 @@ public enum TabHeadersEngData {
 	),
 	ACTION_ADVENTURE_GAMES(
 			"Action-adventure games"
+	),
+	TRUCKS(
+			"Trucks"
+	),
+	SPORTS_CARS(
+			"Sports cars"
+	),
+	JINGLE_BELLS(
+			"Jingle Bells"
+	),
+	FIREPLACES(
+			"Fireplaces"
+	),
+	COOKING_SHOWS(
+			"Cooking shows"
+	),
+	TELEVISION_SERIES(
+			"Television series"
+	),
+	VISUAL_ARTS(
+			"Visual arts"
+	),
+	NEWS(
+			"News"
+	),
+	LEGOS(
+			"Legos"
+	),
+	CHRISTMAS_CAROL(
+			"Christmas carol"
+	),
+	COMEDY(
+			"Comedy"
+	),
+	EMPTY(
+			""
 	);
 
 	//region ArrayList
