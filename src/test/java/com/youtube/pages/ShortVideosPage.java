@@ -18,7 +18,7 @@ import static java.time.Duration.ofSeconds;
 public class ShortVideosPage {
 	private final ElementsCollection shortsItemListElement = $$("#shorts-inner-container ytd-reel-video-renderer h2 yt-formatted-string");
 	private final ElementsCollection likeListElement = $$("ytd-toggle-button-renderer");
-	private final SelenideElement commentsElement = $("#comments-button a #text");
+	private final SelenideElement commentsElement = $("#comments-button");
 	private final SelenideElement shareElement = $("#share-button a #text");
 
 	private static final String DISLIKE_RUS = "Не нравится";
@@ -71,7 +71,6 @@ public class ShortVideosPage {
 		softAssertions.assertThat(likeListElement.get(1).shouldBe(enabled, ofSeconds(EIGHT_SEC.getValue())).exists())
 				.as("Icon \"dislike\" not found")
 				.isTrue();
-		//softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, Duration.ofSeconds(EIGHT_SEC.getValue())).$("a #text").getText())
 		softAssertions.assertThat(likeListElement.get(1).shouldBe(visible, ofSeconds(EIGHT_SEC.getValue())).$("span").getText())
 				.as("Icon \"Like\" has grown text")
 				.isEqualTo(getDislikeText());
@@ -83,10 +82,10 @@ public class ShortVideosPage {
 	public void checkCommentsIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(commentsElement.shouldBe(enabled, ofSeconds(SIX_SEC.getValue())).exists())
+		softAssertions.assertThat(commentsElement.shouldBe(enabled, ofSeconds(SIX_SEC.getValue())).$("icon-shape").exists())
 				.as("Icon \"Comments\" not found")
 				.isTrue();
-		softAssertions.assertThat(commentsElement.getText())
+		softAssertions.assertThat(commentsElement.$("span").getText())
 				.as("Icon \"Comments\" does not contain a text")
 				.isNotNull();
 
