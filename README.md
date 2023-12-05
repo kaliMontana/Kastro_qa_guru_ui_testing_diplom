@@ -69,5 +69,6 @@ gradle clean test -DtestTag=Open
 gradle clean test -DtestTag=ShortVideos 
 gradle clean test -DtestTag=HeaderTabs 
 gradle clean test -DtestTag=AllTests allureServe
+gradle clean test -DLauncher=Remote -DtestTag=HeaderTabs allureServe
 
 https://jenkins.autotests.cloud/job/C12_Kastro_Vilson_qa_guru_ui_testing_with_notifications_diploma/
