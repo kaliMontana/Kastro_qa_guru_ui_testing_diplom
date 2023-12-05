@@ -19,7 +19,7 @@ public class ShortVideosPage {
 	private final ElementsCollection shortsItemListElement = $$("#shorts-inner-container ytd-reel-video-renderer h2 yt-formatted-string");
 	private final ElementsCollection likeListElement = $$("ytd-toggle-button-renderer");
 	private final SelenideElement commentsElement = $("#comments-button");
-	private final SelenideElement shareElement = $("#share-button a #text");
+	private final SelenideElement shareElement = $("#share-button");
 
 	private static final String DISLIKE_RUS = "Не нравится";
 	private static final String DISLIKE = "Dislike";
@@ -96,10 +96,10 @@ public class ShortVideosPage {
 	public void checkShareIconStep() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
-		softAssertions.assertThat(shareElement.shouldBe(enabled, ofSeconds(SIX_SEC.getValue())).exists())
+		softAssertions.assertThat(shareElement.shouldBe(enabled, ofSeconds(SIX_SEC.getValue())).$("icon-shape").exists())
 				.as("Icon \"Comments\" not found")
 				.isTrue();
-		softAssertions.assertThat(shareElement.getText())
+		softAssertions.assertThat(shareElement.$("span").getText())
 				.as("Icon \"Share\" has grown text")
 				.isEqualTo(getShareText());
 
