@@ -16,7 +16,7 @@ public class BeforeYouContinuePage {
 
 	@Step("Click on the Reject element")
 	public void clickOnRejectAllStep() {
-		sleep(2000);
+		sleep(4000);
 
 		if (rejectAllElement.exists()) {
 			rejectAllElement.shouldBe(Condition.visible, Duration.ofSeconds(SIX_SEC.getValue()))
