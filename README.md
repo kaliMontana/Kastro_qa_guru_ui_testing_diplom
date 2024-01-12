@@ -29,6 +29,8 @@ JUnit 5 is used as a unit testing library.
 
 Gradle is used to build the project automatically.
 
+Selenide is used for interaction with UI.
+
 Selenoid launches browsers in Docker containers.
 
 Allure Report generates a test run report.
