@@ -45,7 +45,7 @@ After the run is completed, notifications are sent using the bot in Telegram.
 
 ## Starting test 
 <details>
-<summary>Details ...</summary>
+<summary>Starting test from Idea console</summary>
 
 ### Starting tests Locally
 
