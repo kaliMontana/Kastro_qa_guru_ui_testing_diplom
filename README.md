@@ -71,4 +71,8 @@ After the run is completed, notifications are sent using the bot in Telegram.
 
 <p><img src="images/screenshots/allure_report.png" alt="allure report"/></p>
 
+## Telegram report
+
+<p><img src="images/screenshots/telegram_report.png" alt="allure report"/></p>
+
 ### Please don't forget click on Star button ;)
