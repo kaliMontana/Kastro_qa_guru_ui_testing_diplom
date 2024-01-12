@@ -65,13 +65,13 @@ After the run is completed, notifications are sent using the bot in Telegram.
 
 #### After passing the tests, the result is displayed in Allure Report
 
-## <img width="6%" title="Allure" src="images/screenshots/allure_report.png"> Пример отчетов в [Allure Report](https://jenkins.autotests.cloud/job/Students/job/C12_Kastro_Vilson_qa_guru_ui_testing_with_notifications_diploma/60/allure/#behaviors/28eaa749046249292ad126338a89aa0a/48fd01b774fc9977/)
+## <img width="6%" title="Allure" src="images/screenshots/allure_report.png"> Example of [Allure Report](https://jenkins.autotests.cloud/job/Students/job/C12_Kastro_Vilson_qa_guru_ui_testing_with_notifications_diploma/60/allure/#behaviors/28eaa749046249292ad126338a89aa0a/48fd01b774fc9977/)
 
 ## Allure report for each UI test includes a screenshot, log, html page and a video of the test being passing
 
 <p><img src="images/screenshots/allure_report.png" alt="allure report"/></p>
 
-## Telegram report
+## Example of Telegram report
 
 <p><img src="images/screenshots/telegram_report.png" alt="allure report"/></p>
 
