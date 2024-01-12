@@ -56,7 +56,7 @@ After the run is completed, notifications are sent using the bot in Telegram.
 * ```gradle clean test -DtestTag=${TAGTEST} -DLauncher=Remote allureServe```
 </details>
 
-### <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg"> Starting tests from [Jenkins](https://jenkins.autotests.cloud/job/C12_Kastro_Vilson_qa_guru_ui_testing_with_notifications_diploma/)
+### <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg"> Starting tests from [Jenkins](https://jenkins.autotests.cloud/job/Students/job/C12_Kastro_Vilson_qa_guru_ui_testing_with_notifications_diploma/)
 #### After setting up the project in Jenkins and clicking on the “Build with parameters” button, select the needed test name and click on Build button, then the tests will begin to be assembled and run through the virtual machine in Selenoid.
 
 <p><img src="images/screenshots/job_jenkins.png" alt="Jenkins"/></p>
