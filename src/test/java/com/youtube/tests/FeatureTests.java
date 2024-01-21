@@ -1,6 +1,9 @@
 package com.youtube.tests;
 
-import com.youtube.pages.*;
+import com.youtube.pages.BeforeYouContinuePage;
+import com.youtube.pages.MainPage;
+import com.youtube.pages.ResultsPage;
+import com.youtube.pages.ShortVideosPage;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
 import io.qameta.allure.Owner;
@@ -15,7 +18,6 @@ import org.junit.jupiter.api.Test;
 public class FeatureTests extends TestSetup {
 	MainPage mainPage = new MainPage();
 	ResultsPage resultsPage = new ResultsPage();
-	HeaderTabsPage headerTabs = new HeaderTabsPage();
 	ShortVideosPage shortVideosPage = new ShortVideosPage();
 	BeforeYouContinuePage beforeYouContinuePage = new BeforeYouContinuePage();
 
@@ -81,6 +83,6 @@ public class FeatureTests extends TestSetup {
 
 		beforeYouContinuePage.clickOnRejectAllStep();
 
-		headerTabs.checkHeaderTabsSteps();
+		mainPage.checkHeaderTabsSteps();
 	}
 }
