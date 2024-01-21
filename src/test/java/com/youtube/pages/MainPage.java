@@ -3,6 +3,7 @@ package com.youtube.pages;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import com.youtube.components.HeaderTabsPage;
 import com.youtube.helpers.Attach;
 import io.qameta.allure.Step;
 import org.assertj.core.api.SoftAssertions;
@@ -22,6 +23,8 @@ public class MainPage {
 	private final SelenideElement shortsElement = $(".style-scope ytd-guide-section-renderer");
 
 	private static final String SEARCHED_WORD = APPIUM.getValue();
+
+	HeaderTabsPage headerTabs = new HeaderTabsPage();
 
 
 	@Step("Open the main page")
@@ -55,5 +58,10 @@ public class MainPage {
 	@Step("Click on Panoramic element")
 	public void clickOnPanoramicVideosStep() {
 		shortsElement.shouldBe(enabled, Duration.ofSeconds(SIX_SEC.getValue())).click();
+	}
+
+	@Step("Check the existence of the tabs in the header bar")
+	public void checkHeaderTabsSteps() {
+		headerTabs.checkHeaderTabs();
 	}
 }
