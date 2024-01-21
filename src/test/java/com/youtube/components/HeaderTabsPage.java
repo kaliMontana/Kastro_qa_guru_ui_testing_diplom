@@ -1,4 +1,4 @@
-package com.youtube.pages;
+package com.youtube.components;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
@@ -6,7 +6,6 @@ import com.codeborne.selenide.SelenideElement;
 import com.youtube.dataProviders.TabHeadersEngData;
 import com.youtube.dataProviders.TabHeadersRusData;
 import com.youtube.helpers.Attach;
-import io.qameta.allure.Step;
 import org.assertj.core.api.SoftAssertions;
 
 import java.time.Duration;
@@ -24,8 +23,7 @@ public class HeaderTabsPage {
 
 
 	//region Steps
-	@Step("Check the existence of the tabs in the header bar")
-	public void checkHeaderTabsSteps() {
+	public void checkHeaderTabs() {
 		SoftAssertions softAssertions = new SoftAssertions();
 
 		softAssertions.assertThat(tabsListTextElements.shouldBe(CollectionCondition.sizeGreaterThan(0),
