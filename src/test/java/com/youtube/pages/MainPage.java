@@ -12,6 +12,7 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.*;
+import static com.youtube.dataProviders.SearchedWords.APPIUM;
 import static com.youtube.helpers.Waiting.SIX_SEC;
 
 public class MainPage {
@@ -20,7 +21,7 @@ public class MainPage {
 
 	private final SelenideElement shortsElement = $(".style-scope ytd-guide-section-renderer");
 
-	private static final String SEARCHED_WORD = "Appium";
+	private static final String SEARCHED_WORD = APPIUM.getValue();
 
 
 	@Step("Open the main page")
