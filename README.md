@@ -1,4 +1,4 @@
-# Project to automate UI testing of the youtube.com site
+# Project to automate UI testing of the [youtube.com](https://www.youtube.com) site
 
 Site for testing [youtube.com](https://www.youtube.com)
 
