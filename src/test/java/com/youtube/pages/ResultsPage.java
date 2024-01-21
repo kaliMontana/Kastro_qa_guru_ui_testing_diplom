@@ -17,7 +17,7 @@ import static com.youtube.helpers.Waiting.SIX_SEC;
 
 public class ResultsPage {
 	private final ElementsCollection itemListElement = $$("#dismissible");
-	public final SelenideElement itemTitleElement = $x("//h1[contains(@class,'title style-scope')]//yt-formatted-string");
+	private final SelenideElement itemTitleElement = $x("//h1[contains(@class,'title style-scope')]//yt-formatted-string");
 
 	private static final String RESULT_PATH = "/results?search_query=appium";
 
